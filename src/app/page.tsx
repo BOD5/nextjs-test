@@ -33,6 +33,9 @@ export default function IndexPage() {
         >
           GitHub
         </Link>
+        <Link href="/blog" rel="noreferrer" className={buttonVariants()}>
+          Blog
+        </Link>
       </div>
     </section>
   )
