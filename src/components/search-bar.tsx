@@ -16,14 +16,11 @@ import {
 } from "./ui/select"
 import SwiperUi from "./ui/swiper"
 
-const getCategories = async () => {
-  return await fetch("https://dummyjson.com/products/categories").then((res) =>
-    res.json()
-  )
+interface Props {
+  categories: any
 }
 
-const SearchBar = async () => {
-  const categories = await getCategories()
+const SearchBar: React.FC<Props> = ({ categories }) => {
   const categoriesUI = categories.map((c: string) => {
     return (
       <Button variant={"link"}>

@@ -1,7 +1,7 @@
 "use client"
 
 // Import Swiper styles
-import React from "react"
+import React, { CSSProperties } from "react"
 import { SwiperOptions } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 
@@ -14,18 +14,24 @@ interface Props extends React.PropsWithChildren {
   className?: string
 }
 
+interface CustomCss extends CSSProperties {
+  [key: string]: any
+}
+
 const SwiperUi = ({ children, options = {}, ...props }: Props) => {
   const childrenUi = React.Children.map(children, (el) => (
     <SwiperSlide style={{ width: "fit-content" }}>{el}</SwiperSlide>
   ))
+  const customStyles: CustomCss = {
+    "--swiper-navigation-size": "20px",
+    "--swiper-navigation-color": "var(--background)",
+    "padding-left": "1.25rem",
+    "padding-right": "1.25rem",
+  }
+
   return (
     <Swiper
-      style={{
-        "--swiper-navigation-size": "20px",
-        "--swiper-navigation-color": "var(--background)",
-        "padding-left": "1.25rem",
-        "padding-right": "1.25rem",
-      }}
+      style={customStyles}
       {...options}
       navigation={true}
       modules={[Navigation, Mousewheel, FreeMode]}
