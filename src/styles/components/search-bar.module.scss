@@ -1,0 +1,26 @@
+.line {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  gap: 15px;
+
+
+  @media (max-width: 1024px) {
+    grid-template: "filter sort"
+      "swiper swiper";
+
+    .sort {
+      grid-area: sort;
+      justify-self: end;
+    }
+
+    .filter {
+      grid-area: filter;
+      justify-self: start;
+    }
+
+    .swiper {
+      grid-area: swiper;
+    }
+  }
+}

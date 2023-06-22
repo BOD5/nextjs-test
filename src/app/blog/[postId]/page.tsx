@@ -18,7 +18,6 @@ const ToolPage = async (props: any) => {
     `https://jsonplaceholder.typicode.com/posts/${props.params.postId}`
   ).then((res) => res.json())
 
-  console.log(" - props:18 >", props) // eslint-disable-line no-console
   return (
     <div className="container pt-5">
       <Button variant="ghost">
