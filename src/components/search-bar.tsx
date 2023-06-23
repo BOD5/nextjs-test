@@ -18,13 +18,16 @@ import SwiperUi from "./ui/swiper"
 
 interface Props {
   categories: any
+  setCategory: React.Dispatch<React.SetStateAction<string>>
 }
 
-const SearchBar: React.FC<Props> = ({ categories }) => {
+const SearchBar: React.FC<Props> = ({ categories, setCategory }) => {
+  console.log(" - categories:24 >", categories) // eslint-disable-line no-console
   const categoriesUI = categories.map((c: string) => {
     return (
-      <Button variant={"link"}>
-        <Link href={`/categories/${c}`}>{c}</Link>
+      <Button onClick={(e) => setCategory(c)} key={c} variant={"link"}>
+        {/* <Link href={`/categories/${c}`}>{c}</Link> */}
+        {c}
       </Button>
     )
   })
@@ -65,8 +68,9 @@ const SearchBar: React.FC<Props> = ({ categories }) => {
         </Select>
       </div>
       <div className="flex justify-center">
-        <Button variant={"link"}>
-          <Link href={"/categories"}>View all categories</Link>
+        <Button onClick={(e) => setCategory("")} variant={"link"}>
+          {/* <Link href={"/categories"}>View all categories</Link> */}
+          View all categories
         </Button>
       </div>
     </div>
