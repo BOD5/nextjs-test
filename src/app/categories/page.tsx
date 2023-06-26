@@ -5,13 +5,11 @@ import { buttonVariants } from "@/components/ui/button"
 import FirstBlock from "@/components/mainPage/first-block"
 import ToolCard from "@/components/tool-card"
 
-export default function IndexPage(context) {
+export default function IndexPage() {
   return (
     <main>
       <FirstBlock />
-      <div className="container">
-        <ToolCard></ToolCard>
-      </div>
+      <div className="container"></div>
     </main>
   )
 }

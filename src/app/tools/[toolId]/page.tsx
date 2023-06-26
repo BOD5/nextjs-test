@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import Breadcrumbs from "@/components/breadcrumbs"
 import { Icons } from "@/components/default/icons"
 
-const Page = async (context) => {
+const Page = async (context: any) => {
   const { params } = context
   const tool = await getProduct(params.toolId)
   const crumbs = [
