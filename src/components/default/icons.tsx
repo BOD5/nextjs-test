@@ -26,67 +26,67 @@ export const Icons = {
         <path
           d="M286 174C291.523 174 296 169.523 296 164C296 158.477 291.523 154 286 154C280.477 154 276 158.477 276 164C276 169.523 280.477 174 286 174Z"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           fill="none"
         />
         <path
           d="M163 296C168.523 296 173 291.523 173 286C173 280.477 168.523 276 163 276C157.477 276 153 280.477 153 286C153 291.523 157.477 296 163 296Z"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           fill="none"
         />
         <path
           d="M163 51C168.523 51 173 46.5228 173 41C173 35.4772 168.523 31 163 31C157.477 31 153 35.4772 153 41C153 46.5228 157.477 51 163 51Z"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           fill="none"
         />
         <path
           d="M41 174C46.5228 174 51 169.523 51 164C51 158.477 46.5228 154 41 154C35.4772 154 31 158.477 31 164C31 169.523 35.4772 174 41 174Z"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           fill="none"
         />
         <path
           opacity="0.5"
           d="M275.225 275.225C303.02 247.566 275.497 174.945 213.912 113.088C152.055 51.5026 79.4337 23.9801 51.775 51.7751C23.98 79.4338 51.5025 152.055 113.087 213.913C174.945 275.498 247.566 303.02 275.225 275.225Z"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           fill="none"
         />
         <path
           opacity="0.5"
           d="M213.912 213.913C275.497 152.055 303.02 79.4338 275.225 51.7751C247.566 23.9801 174.945 51.5026 113.087 113.088C51.5025 174.945 23.98 247.566 51.775 275.225C79.4337 303.02 152.055 275.498 213.912 213.913Z"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           fill="none"
         />
         <path
           d="M163.5 321.503C202.712 321.599 234.601 250.787 234.794 163.5C234.601 76.213 202.712 5.40066 163.5 5.497C124.288 5.40066 92.3985 76.213 92.2058 163.5C92.3985 250.787 124.288 321.599 163.5 321.503Z"
           stroke="currentColor"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           fill="none"
         />
         <path
           d="M163.5 234.794C250.787 234.601 321.599 202.712 321.503 163.5C321.599 124.288 250.787 92.3987 163.5 92.206C76.2129 92.3987 5.40052 124.288 5.49687 163.5C5.40052 202.712 76.2129 234.601 163.5 234.794Z"
           stroke="currentColor"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           fill="none"
         />
         <path
