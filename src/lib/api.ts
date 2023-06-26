@@ -8,3 +8,8 @@ export const getCategories = async () => {
     res.json()
   )
 }
+export const getProduct = async (productId: string | number) => {
+  return await fetch(`https://dummyjson.com/products/${productId}`).then((res) =>
+    res.json()
+  )
+}

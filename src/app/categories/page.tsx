@@ -5,7 +5,7 @@ import { buttonVariants } from "@/components/ui/button"
 import FirstBlock from "@/components/mainPage/first-block"
 import ToolCard from "@/components/tool-card"
 
-export default function IndexPage() {
+export default function IndexPage(context) {
   return (
     <main>
       <FirstBlock />

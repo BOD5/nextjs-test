@@ -1,8 +1,10 @@
 import Image from "next/image"
-import { ExternalLink, PlusCircle } from "lucide-react"
+import Link from "next/link"
+import { PlusCircle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
+import { Icons } from "./default/icons"
 import { AspectRatio } from "./ui/aspect-ratio"
 import { Button } from "./ui/button"
 import {
@@ -43,10 +45,11 @@ const ToolCard: React.FC<Props> = ({ content, className, ...props }) => {
       </CardHeader>
       <CardContent className="grid gap-4"></CardContent>
       <CardFooter className="flex gap-2">
-        <Button className="w-full">
-          {" "}
-          <ExternalLink />{" "}
-        </Button>
+        <Link className="w-full" href={`/tools/${content.id}`}>
+          <Button className="w-full">
+            <Icons.external />{" "}
+          </Button>
+        </Link>
         <Button className="w-full">
           {" "}
           <PlusCircle />{" "}
