@@ -17,22 +17,6 @@ export default function FirstBlock() {
         </p>
       </div>
       <div className="flex gap-4 justify-center">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants()}
-        >
-          Documentation
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline" })}
-        >
-          GitHub
-        </Link>
         <Link href="/blog" rel="noreferrer" className={buttonVariants()}>
           Blog
         </Link>

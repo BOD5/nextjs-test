@@ -25,22 +25,26 @@ const ToolCard: React.FC<Props> = ({ content, className, ...props }) => {
   console.log(" - content:23 >", content) // eslint-disable-line no-console
   return (
     <Card
-      className={cn("w-[380px] flex flex-col justify-between", className)}
+      className={cn("flex w-[380px] flex-col justify-between", className)}
       {...props}
     >
-      <AspectRatio ratio={16 / 9} className="bg-muted">
-        <Image
-          src={
-            content?.images[0] ||
-            "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
-          }
-          alt="Photo by Drew Beamer"
-          fill
-          className="rounded-md object-cover"
-        />
-      </AspectRatio>
+      <Link href={`/tools/${content.id}`}>
+        <AspectRatio ratio={16 / 9} className="bg-muted">
+          <Image
+            src={
+              content?.images[0] ||
+              "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
+            }
+            alt="Photo by Drew Beamer"
+            fill
+            className="rounded-md object-cover"
+          />
+        </AspectRatio>
+      </Link>
       <CardHeader>
-        <CardTitle>{content?.title}</CardTitle>
+        <CardTitle>
+          <Link href={`/tools/${content.id}`}>{content?.title}</Link>
+        </CardTitle>
         <CardDescription>{content?.description}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4"></CardContent>
