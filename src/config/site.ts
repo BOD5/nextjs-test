@@ -17,6 +17,14 @@ export const siteConfig = {
       title: "Login",
       href: "/auth",
     },
+    {
+      title: "Add Tool",
+      href: "/add-new",
+    },
+    {
+      title: "Terms",
+      href: "/terms",
+    },
   ],
   links: {
     twitter: "https://twitter.com/shadcn",
