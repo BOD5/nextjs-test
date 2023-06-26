@@ -1,5 +1,5 @@
 
-export const getTools = async (category: string) =>{
+export const getTools = async (category?: string) =>{
   return await fetch(`https://dummyjson.com/products/${category? 'category/' + category : ''}`).then((res) =>
     res.json()
   )}

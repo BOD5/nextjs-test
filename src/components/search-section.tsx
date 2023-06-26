@@ -10,15 +10,17 @@ import ToolsList from "./tools-list"
 interface Props {
   tools?: any
   category?: string
+  categories?: string
 }
 
 const SearchSection: React.FC<Props> = ({
   tools: defaultT,
   category: defaultC,
+  categories: serverCategories,
 }) => {
   const [category, setCategory] = useState(defaultC || "")
-  const [tools, setTools] = useState([])
-  const [categories, setCategories] = useState([])
+  const [tools, setTools] = useState(defaultT || [])
+  const [categories, setCategories] = useState(serverCategories || [])
 
   useEffect(() => {
     getTools(category).then((t) => setTools(t.products))
@@ -26,7 +28,7 @@ const SearchSection: React.FC<Props> = ({
 
   useEffect(() => {
     !defaultT && getTools(category).then((t) => setTools(t.products))
-    !defaultC && getCategories().then((c) => setCategories(c))
+    !serverCategories && getCategories().then((c) => setCategories(c))
   }, [])
 
   return (

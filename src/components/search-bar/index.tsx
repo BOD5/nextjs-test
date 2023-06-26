@@ -1,11 +1,9 @@
 import Link from "next/link"
 import { SwiperOptions } from "swiper"
 
-import style from "@/styles/components/search-bar.module.scss"
-
-import { Icons } from "./default/icons"
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
+import { Icons } from "../default/icons"
+import { Button } from "../ui/button"
+import { Input } from "../ui/input"
 import {
   Select,
   SelectContent,
@@ -13,8 +11,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./ui/select"
-import SwiperUi from "./ui/swiper"
+} from "../ui/select"
+import SwiperUi from "../ui/swiper"
+import style from "./style.module.scss"
 
 interface Props {
   categories: any
@@ -22,11 +21,9 @@ interface Props {
 }
 
 const SearchBar: React.FC<Props> = ({ categories, setCategory }) => {
-  console.log(" - categories:24 >", categories) // eslint-disable-line no-console
   const categoriesUI = categories.map((c: string) => {
     return (
       <Button onClick={(e) => setCategory(c)} key={c} variant={"link"}>
-        {/* <Link href={`/categories/${c}`}>{c}</Link> */}
         {c}
       </Button>
     )
@@ -58,11 +55,9 @@ const SearchBar: React.FC<Props> = ({ categories, setCategory }) => {
           <SelectContent>
             <SelectGroup>
               <SelectItem value="">Sort by</SelectItem>
-              <SelectItem value="apple">Apple</SelectItem>
-              <SelectItem value="banana">Banana</SelectItem>
-              <SelectItem value="blueberry">Blueberry</SelectItem>
-              <SelectItem value="grapes">Grapes</SelectItem>
-              <SelectItem value="pineapple">Pineapple</SelectItem>
+              <SelectItem value="title">Title</SelectItem>
+              <SelectItem value="date">Date</SelectItem>
+              <SelectItem value="rating">Rating</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>

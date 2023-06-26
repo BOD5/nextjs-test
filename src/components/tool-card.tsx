@@ -22,10 +22,9 @@ interface Props {
 }
 
 const ToolCard: React.FC<Props> = ({ content, className, ...props }) => {
-  console.log(" - content:23 >", content) // eslint-disable-line no-console
   return (
     <Card
-      className={cn("flex w-[380px] flex-col justify-between", className)}
+      className={cn("flex w-full flex-col justify-between", className)}
       {...props}
     >
       <Link href={`/tools/${content.id}`}>

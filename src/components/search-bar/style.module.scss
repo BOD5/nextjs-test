@@ -23,4 +23,18 @@
       grid-area: swiper;
     }
   }
+
+  @media (max-width: 768px) {
+    grid-template: "filter"
+      "sort"
+      "swiper";
+
+    .sort {
+      width: 100%;
+    }
+
+    .filter {
+      width: 100%;
+    }
+  }
 }

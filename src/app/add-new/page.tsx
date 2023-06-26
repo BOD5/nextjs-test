@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import { Icons } from "@/components/default/icons"
 
 const AddNewPage = () => {
@@ -15,6 +16,7 @@ const AddNewPage = () => {
           <Input type="email" placeholder="Email" />
           <Input type="title" placeholder="Tool title" />
           <Input type="link" placeholder="Tool link" />
+          <Textarea placeholder="Description" />
           <Button>Submit</Button>
         </CardContent>
       </Card>

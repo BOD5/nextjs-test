@@ -25,8 +25,8 @@ const SwiperUi = ({ children, options = {}, ...props }: Props) => {
   const customStyles: CustomCss = {
     "--swiper-navigation-size": "20px",
     "--swiper-navigation-color": "var(--background)",
-    "padding-left": "1.25rem",
-    "padding-right": "1.25rem",
+    paddingLeft: "1.25rem",
+    paddingRight: "1.25rem",
   }
 
   return (
