@@ -22,7 +22,7 @@ export const Icons = {
   filters: SlidersHorizontal,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 327" {...props}>
-      <g clip-path="url(#clip0_1303_98)">
+      <g clipPath="url(#clip0_1303_98)">
         <path
           d="M286 174C291.523 174 296 169.523 296 164C296 158.477 291.523 154 286 154C280.477 154 276 158.477 276 164C276 169.523 280.477 174 286 174Z"
           stroke="currentColor"
