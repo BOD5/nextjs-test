@@ -14,21 +14,26 @@ import styles from "./styles.module.scss"
 interface MainNavProps {
   items?: NavItem[]
 }
-
 export function MainNav({ items }: MainNavProps) {
   const [active, setActive] = React.useState(false)
+
   const showMain = () => {
+    document.body.style.overflow = !active ? "hidden" : "initial"
     setActive(!active)
   }
+
   React.useEffect(() => {
     const resizeListener = () => {
       if (active && window.innerWidth > 768) {
         setActive(false)
+        document.body.style.overflow = "initial"
       }
     }
+
     window.addEventListener("resize", resizeListener)
-    return window.removeEventListener("resize", resizeListener)
-  }, [])
+    return () => window.removeEventListener("resize", resizeListener)
+  }, [active])
+
   return (
     <div className={`${styles.nav} flex gap-6 md:gap-10`}>
       <nav
@@ -43,8 +48,8 @@ export function MainNav({ items }: MainNavProps) {
           (item, index) =>
             item.href && (
               <Button
-                onClick={(e) => {
-                  active && setActive(false)
+                onClick={() => {
+                  setActive(false)
                 }}
                 key={item.href}
                 className={cn(
@@ -61,7 +66,7 @@ export function MainNav({ items }: MainNavProps) {
         )}
       </nav>
       <button
-        onClick={(e) => showMain()}
+        onClick={showMain}
         className={`${styles["nav__trigger"]} z-10 md:hidden`}
       >
         {active ? <X /> : <Menu />}
