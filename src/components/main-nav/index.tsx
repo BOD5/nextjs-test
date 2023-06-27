@@ -43,6 +43,9 @@ export function MainNav({ items }: MainNavProps) {
           (item, index) =>
             item.href && (
               <Button
+                onClick={(e) => {
+                  active && setActive(false)
+                }}
                 key={item.href}
                 className={cn(
                   "flex items-center text-2xl font-medium md:text-base",

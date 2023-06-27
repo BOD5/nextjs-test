@@ -9,7 +9,7 @@ const AddNewPage = () => {
     <section className="container flex flex-1 flex-col items-center justify-center gap-2 pt-16">
       <Card>
         <CardHeader>
-          <Icons.logo className="w-[350px]"></Icons.logo>
+          <Icons.logo className="w-full max-w-[350px]"></Icons.logo>
           <h1 className="text-center text-2xl">Add new Tool</h1>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">

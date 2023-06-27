@@ -7,10 +7,10 @@ import { Icons } from "@/components/default/icons"
 const AuthPage = () => {
   return (
     <section className="container flex flex-1 flex-col items-center justify-center gap-2">
-      <h1 className="text-xl mt-2">Login</h1>
+      <h1 className="mt-2 text-xl">Login</h1>
       <Card>
         <CardHeader>
-          <Icons.logo className="w-[350px]"></Icons.logo>
+          <Icons.logo className="w-full max-w-[350px]"></Icons.logo>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
           <Button variant={"outline"}>Google</Button>
