@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Posts",
-  description: "...",
+  title: "News",
+  description: "ai news",
 }
 
 let posts: any = null
@@ -34,7 +34,7 @@ const Tools = async () => {
   }
   const list: React.ReactElement[] = posts.map((post: any) => (
     <li className="" key={post.id}>
-      <Card className="h-full grid">
+      <Card className="grid h-full">
         <CardHeader>
           <CardTitle>{post.title}</CardTitle>
           <CardDescription>some post</CardDescription>
@@ -42,7 +42,7 @@ const Tools = async () => {
         <CardContent>{post.body}</CardContent>
         <CardFooter className="flex justify-center">
           <Button variant="ghost">
-            <Link href={`/blog/${post.id}`}>Read more...</Link>
+            <Link href={`/news/${post.id}`}>Read more...</Link>
           </Button>
         </CardFooter>
       </Card>
@@ -51,9 +51,11 @@ const Tools = async () => {
   return (
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-        Posts
+        News
       </h1>
-      <ul className="grid grid-cols-3 gap-10">{list}</ul>
+      <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        {list}
+      </ul>
     </section>
   )
 }
