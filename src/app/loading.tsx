@@ -1,5 +1,4 @@
 export default function Loading() {
-  // You can add any UI inside Loading, including a Skeleton.
   return (
     <div className="container absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
       <div className="max-w-1/2 animate-pulse ">
@@ -11,7 +10,7 @@ export default function Loading() {
           xmlns="http://www.w3.org/2000/svg"
           className="mx-auto max-w-full"
         >
-          <g clip-path="url(#clip0_1303_84)">
+          <g clipPath="url(#clip0_1303_84)">
             <path
               d="M286 174C291.523 174 296 169.523 296 164C296 158.477 291.523 154 286 154C280.477 154 276 158.477 276 164C276 169.523 280.477 174 286 174Z"
               stroke="currentColor"

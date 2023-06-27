@@ -8,6 +8,7 @@ import { NavItem } from "@/types/nav"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/default/icons"
 
+import { ThemeToggle } from "../default/theme-toggle"
 import { Button } from "../ui/button"
 import styles from "./styles.module.scss"
 
@@ -35,22 +36,26 @@ export function MainNav({ items }: MainNavProps) {
   }, [active])
 
   return (
-    <div className={`${styles.nav} flex gap-6 md:gap-10`}>
+    <div
+      className={`${styles.nav} flex items-center justify-between gap-6 md:gap-10`}
+    >
+      <Button
+        variant={"ghost"}
+        onClick={showMain}
+        className={`${styles["nav__trigger"]} z-10 md:hidden`}
+      >
+        {active ? <X /> : <Menu />}
+      </Button>
       <nav
         className={`${active ? styles.active : ""} ${
           styles["nav-menu"]
         } hidden items-center gap-6 bg-background md:flex md:bg-transparent`}
       >
-        <Link href="/" className="flex items-center space-x-2">
-          <Icons.logo className="w-full max-w-[150px]" />
-        </Link>
         {items?.map(
           (item, index) =>
             item.href && (
               <Button
-                onClick={() => {
-                  setActive(false)
-                }}
+                onClick={showMain}
                 key={item.href}
                 className={cn(
                   "flex items-center text-2xl font-medium md:text-base",
@@ -64,13 +69,17 @@ export function MainNav({ items }: MainNavProps) {
               </Button>
             )
         )}
+        <div className="min-[420px]:hidden flex ">
+          <nav className="flex items-center space-x-1">
+            <ThemeToggle />
+          </nav>
+          <Button variant={"ghost"} onClick={showMain}>
+            <Link href={"/auth"}>
+              <Icons.user />
+            </Link>
+          </Button>
+        </div>
       </nav>
-      <button
-        onClick={showMain}
-        className={`${styles["nav__trigger"]} z-10 md:hidden`}
-      >
-        {active ? <X /> : <Menu />}
-      </button>
     </div>
   )
 }

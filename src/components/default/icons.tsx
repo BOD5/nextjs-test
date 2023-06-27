@@ -8,6 +8,7 @@ import {
   SlidersHorizontalIcon,
   SunMedium,
   Twitter,
+  UserPlus,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -20,6 +21,7 @@ export const Icons = {
   arrowLeft: ArrowLeft,
   external: ExternalLink,
   filters: SlidersHorizontal,
+  user: UserPlus,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 327" {...props}>
       <g clipPath="url(#clip0_1303_98)">

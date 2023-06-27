@@ -14,10 +14,6 @@ export const siteConfig = {
       href: "/news",
     },
     {
-      title: "Login",
-      href: "/auth",
-    },
-    {
       title: "Add Tool",
       href: "/add-new",
     },
