@@ -2,6 +2,7 @@ import Link from "next/link"
 import { SwiperOptions } from "swiper"
 
 import { Icons } from "../default/icons"
+import SearchFilters from "../search-filters"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import {
@@ -38,10 +39,14 @@ const SearchBar: React.FC<Props> = ({ categories, setCategory }) => {
     <div>
       <Input type="text" placeholder="Search"></Input>
       <div className={style.line}>
-        <Button className={style.filter} variant="outline">
+        <SearchFilters
+          className={style.filter}
+          variant="outline"
+        ></SearchFilters>
+        {/* <Button className={style.filter} variant="outline">
           <Icons.filters className="mr-2 h-4 w-4" />
           Filter
-        </Button>
+        </Button> */}
         <SwiperUi
           className={`${style.swiper} max-w-full`}
           options={swiperOptions}
