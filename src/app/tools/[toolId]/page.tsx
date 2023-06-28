@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { notFound } from "next/navigation"
+import { Copy, Twitter } from "lucide-react"
 
 import { getProduct } from "@/lib/api"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
@@ -47,14 +48,24 @@ const Page = async (context: any) => {
             This tool is verified because it is either an established company or
             has good social media presence Added on March 1
           </p>
-          <p>
-            <Badge className="text-base">Test</Badge>
-          </p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            <Badge className="text-base">Freemium</Badge>
+            Paid plans start from $12/mo
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <Badge className="text-base">Browser Extension</Badge>
+          </div>
+          <h3 className="mt-4">Social Links</h3>
+          <div className="flex flex-gap">
+            <Button variant={"ghost"}>
+              <Twitter />
+            </Button>
+          </div>
         </div>
       </div>
       <Card>
-        <CardContent className="flex gap-4 p-4 align-middle">
-          <div className="w-[250px]">
+        <CardContent className="flex gap-4 p-4 align-middle flex-col md:flex-row">
+          <div className="md:w-[250px]">
             <AspectRatio ratio={5 / 1} className=" bg-muted">
               <Image
                 src={
@@ -67,8 +78,11 @@ const Page = async (context: any) => {
               />
             </AspectRatio>
           </div>
-          <Button variant={"ghost"}>Copy code</Button>
-          <Button variant={"link"} className="ml-auto">
+          <Button variant={"ghost"} size={"lg"} className="text-xl">
+            <Copy className="mr-2" />
+            Copy code
+          </Button>
+          <Button variant={"link"} className="md:ml-auto">
             Promoute
           </Button>
         </CardContent>
@@ -97,7 +111,7 @@ const Page = async (context: any) => {
             </li>
           </ul>
         </section>
-        <aside className="flex shrink-0 flex-col items-start">
+        <aside className="flex shrink-0 flex-col items-start mt-6 md:mt-0">
           <h3>Categories</h3>
           <Button variant={"link"} className="">
             Promoute
@@ -108,12 +122,12 @@ const Page = async (context: any) => {
         </aside>
       </div>
       <section>
-        <h3>{tool.title} Reviews</h3>
+        <h3 className="text-cernter mb-4">{tool.title} Reviews</h3>
         <Card>
-          <CardContent className="flex flex-col justify-between gap-4 p-4 align-middle md:flex-row">
+          <CardContent className="flex flex-col justify-between gap-4 p-4 items-center text-center md:flex-row">
             <div className="text-lg">
               What do you think about Aidaptive ?
-              <p className="mt-2 text-sm text-slate-400">
+              <p className="mt-2 text-sm text-slate-400 md:text-start">
                 Leave a review for the community
               </p>
             </div>

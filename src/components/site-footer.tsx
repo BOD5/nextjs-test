@@ -5,7 +5,7 @@ import { Button } from "./ui/button"
 
 const SiteFooter = () => {
   return (
-    <footer className="border-t">
+    <footer className="border-t mt-8">
       <div className="container flex flex-col items-center justify-center gap-2 border-b py-6 md:flex-row">
         <Link href="/" className="z-0 max-[420px]:order-first md:order-first">
           <Icons.logo className="w-full max-w-[150px]" />

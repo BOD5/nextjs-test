@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { DollarSign, Heart } from "lucide-react"
+import { DollarSign, Heart, Sparkles } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -37,7 +37,7 @@ const ToolCard: React.FC<Props> = ({ content, className, ...props }) => {
       className={cn("relative flex w-full flex-col justify-between", className)}
       {...props}
     >
-      <Link href={`/tools/${content.id}`}>
+      <Link href={`/tools/${content.id}`} className="relative">
         <AspectRatio
           ratio={16 / 9}
           className="overflow-hidden rounded-t-md bg-muted"
@@ -52,6 +52,7 @@ const ToolCard: React.FC<Props> = ({ content, className, ...props }) => {
             className=" object-cover transition duration-150 ease-out hover:scale-110"
           />
         </AspectRatio>
+        <Badge className="absolute left-2 -bottom-3">Featured</Badge>
       </Link>
       <div className="absolute right-0 top-2 rounded-l-lg bg-background p-2">
         $ 12/mo
@@ -69,13 +70,28 @@ const ToolCard: React.FC<Props> = ({ content, className, ...props }) => {
         <CardDescription className="text-base">
           {content?.description}
         </CardDescription>
-        <div>
+        <div className="flex justify-between">
           <Badge
             variant={"secondary"}
             className="self-start rounded-md px-4 text-base"
           >
             <DollarSign className="inline-block h-4 w-4" /> Free
           </Badge>
+
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <div>
+                  <Sparkles className="mr-2 inline-block" /> 2
+                </div>
+              </TooltipTrigger>
+
+              <TooltipContent className="text-base">
+                <p>Api</p>
+                <p>Discord community</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
         <div className="-ms-3 text-base">
           <Button variant={"link"}>#summarizer</Button>

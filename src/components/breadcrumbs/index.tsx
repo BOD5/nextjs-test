@@ -20,8 +20,8 @@ const Breadcrumbs: React.FC<Props> = ({ routes }) => {
     )
   })
   return (
-    <nav className={styles.breadcrumbes}>
-      <ul className="flex">{routesUi}</ul>
+    <nav className={`${styles.breadcrumbes} -ml-4`}>
+      <ul className="flex flex-wrap">{routesUi}</ul>
     </nav>
   )
 }
