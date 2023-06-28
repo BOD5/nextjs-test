@@ -18,9 +18,11 @@ export default function FirstBlock() {
           competition and experience the future of technology today.
         </p>
       </div>
-      <div className="flex justify-center gap-4">
-        <Button>Tools added today</Button>
-        <Button variant={"outline"}>News added today</Button>
+      <div className="flex flex-wrap justify-center gap-4">
+        <Button className="w-full sm:w-auto">Tools added today</Button>
+        <Button className="w-full sm:w-auto" variant={"outline"}>
+          News added today
+        </Button>
       </div>
     </section>
   )
