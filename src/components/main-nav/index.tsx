@@ -19,6 +19,9 @@ export function MainNav({ items }: MainNavProps) {
   const [active, setActive] = React.useState(false)
 
   const showMain = () => {
+    if (window.innerWidth > 768) {
+      return
+    }
     document.body.style.overflow = !active ? "hidden" : "initial"
     setActive(!active)
   }
