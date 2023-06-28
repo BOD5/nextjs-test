@@ -11,6 +11,7 @@ import Rating from "@/components/ui/rating"
 import Breadcrumbs from "@/components/breadcrumbs"
 import { Icons } from "@/components/default/icons"
 import ToolHeader from "@/components/tool-page/tool-header"
+import FastComment from "@/components/widgets/FastComments"
 
 const Page = async (context: any) => {
   const { params } = context
@@ -134,6 +135,9 @@ const Page = async (context: any) => {
             <Rating value={0} className="max-w-[180px]"></Rating>
           </CardContent>
         </Card>
+      </section>
+      <section>
+        <FastComment />
       </section>
     </main>
   )
