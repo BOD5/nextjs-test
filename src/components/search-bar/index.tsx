@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { SwiperOptions } from "swiper"
 
+import CategoriesDialog from "../categories-dialog"
 import { Icons } from "../default/icons"
 import SearchFilters from "../search-filters"
 import { Button } from "../ui/button"
@@ -24,7 +25,12 @@ interface Props {
 const SearchBar: React.FC<Props> = ({ categories, setCategory }) => {
   const categoriesUI = categories.map((c: string) => {
     return (
-      <Button onClick={(e) => setCategory(c)} key={c} variant={"link"}>
+      <Button
+        onClick={(e) => setCategory(c)}
+        key={c}
+        variant={"ghost"}
+        // className="text-green-500"
+      >
         {c}
       </Button>
     )
@@ -43,10 +49,6 @@ const SearchBar: React.FC<Props> = ({ categories, setCategory }) => {
           className={style.filter}
           variant="outline"
         ></SearchFilters>
-        {/* <Button className={style.filter} variant="outline">
-          <Icons.filters className="mr-2 h-4 w-4" />
-          Filter
-        </Button> */}
         <SwiperUi
           className={`${style.swiper} max-w-full`}
           options={swiperOptions}
@@ -68,10 +70,7 @@ const SearchBar: React.FC<Props> = ({ categories, setCategory }) => {
         </Select>
       </div>
       <div className="flex justify-center">
-        <Button onClick={(e) => setCategory("")} variant={"link"}>
-          {/* <Link href={"/categories"}>View all categories</Link> */}
-          View all categories
-        </Button>
+        <CategoriesDialog categories={categories}></CategoriesDialog>
       </div>
     </div>
   )
